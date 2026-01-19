@@ -60,7 +60,7 @@ export default class NeonEventInstance {
 	}
 
 	getClassImage(classImages) {
-		let result = classImages['/src/lib/images/' + this.name.replace(/\s+/g, '_') + '.jpg'];
+		let result = classImages['/src/lib/images/' + this.name.replace(/(\s+|:)/g, '_') + '.jpg'];
 
 		if (typeof result === 'undefined' || result === null) {
 			switch (this.category) {
